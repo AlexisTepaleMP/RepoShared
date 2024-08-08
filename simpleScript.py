@@ -4,14 +4,15 @@
 import pandas as pd
 
 class User:
-    def __init__(self, name: str, age: int, gender: str) -> None:
+    def __init__(self, name: str, age: int, gender: str, fav_color: str) -> None:
         self.name = name
         self.age = age
         self.gender = gender
+        self.fav_color = fav_color
     
     def genDataFrame(self) -> pd.DataFrame:
-        return pd.DataFrame(data=[self.name, self.age, self.gender],
-                            columns=['name', 'age', 'gender'])
+        return pd.DataFrame(data=[self.name, self.age, self.gender, self.fav_color],
+                            columns=['name', 'age', 'gender', 'fav_color'])
 
 def main():
     exampleUser = User(name='John', 
